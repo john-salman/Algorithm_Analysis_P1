@@ -43,7 +43,7 @@ int main(int argc, char * argv [] ) {
     auto stop = chrono::system_clock::now();
     elapsed_time = stop - start;
 
-    cout << "It took " << elapsed_time.count() << " seconds to calculate gcd(" << m << ", " << n << ") = " << final << "." << endl;
+    cout << "It took " << elapsed_time.count() << " milliseconds to calculate gcd(" << m << ", " << n << ") = " << final << "." << endl;
   }
 
   return 0;
