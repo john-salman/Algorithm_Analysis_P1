@@ -54,12 +54,14 @@ int main(int argc, char * argv [] ) {
 int consecutive (int _m, int _n) {
   int m = _m;
   int n = _n;
-  int r = m % n;
-  while (r != 0) {
-    n--;
-    r = m % n;
+  int r = _n;
+  while (r > 1) {
+    if (m % r == 0 && n % r == 0) {
+      return r; // this is the gcd
+    }
+    r--; // else go down by one
   }
-  return n;
+  return r; // if r is 1
 }
 
 
