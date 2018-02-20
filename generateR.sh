@@ -10,6 +10,6 @@ echo "Generating random numbers..."
 for i in $(seq $2)
 do
 	N=$(($(($RANDOM%$MODOP))+$3))
-	echo $N
+	echo $N >> $1
 done
 echo "Done"
