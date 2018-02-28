@@ -1,7 +1,7 @@
 // File name: fibGenerator.cpp                                                                                                                                            
 // Authors: John Salman, Jack Newman                                                                                                                                      
-// Description: This program will generate a fibonacci sequence of length n, an write that to a file.                                                                     
-// To run: ./a.x n example.txt, with n = any positive integer 0-47                                                                                                        
+// Description: This program will generate a fibonacci sequence of length n, and write that to a file.                                                                     
+// To run: ./a.x n output_file  for any n integer 0-47                                                                                                        
 
 #include <iostream>
 #include <stdlib.h>
@@ -24,12 +24,12 @@ int main(int argc, char* argv[]) {
   int n = atoi(argv[1]);
   // this next error I provided because I started encountering interspersed negative values past n = 47                                                                   
   // do we just want to get the absolute value, or should we be implementing the int's as unsigned                                                                        
-  if (n > 47 ) {
-    cout << "Providing an n value greater than 47 will generate errors, exiting." << endl;
-    return 1;
-  }
+  // if (n > 47 ) {
+  //   cout << "Providing an n value greater than 47 will generate errors, exiting." << endl;
+  //   return 1;
+  // }
 
-  int fib[n]; // our array containing to contain the fibonacci sequence                                                                                                   
+  long long fib[n]; // our array to contain the fibonacci sequence                                                                                                   
   fibonacci(fib, n); // pass the array and an n value to act as the length                                                                                                
 
   ofstream file;
@@ -47,7 +47,7 @@ int main(int argc, char* argv[]) {
 // Input: an integer array of size n                                                                                                                                      
 // Output: modifies the values of the array by reference                                                                                                                  
 // This function was derived from the algorithm on page 82 (section 2.5)                                                                                                  
-void fibonacci(int fib[], int n) {
+void fibonacci(long long fib[], int n) {
   fib[0] = 0;
   fib[1] = 1;
   for (int i = 2; i < n; i++) {
