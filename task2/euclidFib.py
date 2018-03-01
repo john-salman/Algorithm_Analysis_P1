@@ -2,6 +2,7 @@
 
 import sys
 import matplotlib.pyplot as plt
+import os
 
 def main():
   file_name = sys.argv[1]
@@ -24,11 +25,17 @@ def main():
   string_out = "Worst-case efficiency of Euclids Algortihm on a Fibonacci Sequence of length: " + repr(len(numbers)) + " is: " + repr(average)
   print (string_out)
 
+
   fib_numbers = numbers[2:]
   plt.scatter(fib_numbers, divisions)
   plt.xlabel("Fibonacci Numbers")
   plt.ylabel("Number of modulo divisions")
-  plt.show()
+  plt.tight_layout()
+  if(sys.argv[2] == "save"):
+    imgname = os.path.splitext(sys.argv[1])[0] + ".png"
+    plt.savefig(imgname)
+  else:
+    plt.show()
 
 # Input: integer _m, integer _n                                                                                                                                           
 # Condition: _m >= _n                                                                                                                                                     
