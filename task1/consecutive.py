@@ -56,12 +56,10 @@ def consecutive(_m,_n):
   divisions = 0
   t = min(_m,_n)
   while t > 0:
-    if _m % t == 0:
-      divisions += 1
-      if _n % t == 0:
-        divisions += 1
-        break;
+    if _m % t == 0 and _n % t == 0:
+      return divisions + 2 # because we still did 2 last divisions and found the gcd
     t -= 1
+    divisions += 2 # count both divisions seperately as indicated in the spec
   return divisions
 
 if __name__== "__main__":
