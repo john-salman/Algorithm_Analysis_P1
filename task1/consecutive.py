@@ -1,12 +1,17 @@
 #!/usr/bin/python                                                                                                                                                         
 
 import sys
+import os
+import matplotlib.pyplot as plt
+
+
 
 def main():
   file_name = sys.argv[1]
   file = open(file_name, 'r')
   m_numbers = []
   n_numbers = []
+  averages = []
   for line in file:
       if line >= 3:
           m_numbers.append(int(line))
@@ -21,13 +26,18 @@ def main():
 
     j = 0
     n = n_numbers[j]
-    while m >= n:
+    while m > n:
         divisions.append(consecutive(m,n))
         j += 1
         n = n_numbers[j]
     average = sum(divisions) / float(m)
     string_out = "Average-case efficiency of Consecutive-Integer Algortihm on input size: " + repr(m) + " is: " + repr(average)
-    print (string_out)
+    averages.append(average)
+    # print (string_out)
+
+  print(divisions)
+  print(numbers)
+  print(average)
 
 # Input: integer _m, integer _n                                                                                                                                           
 # Condition: _m >= _n & n != 0                                                                                                                                            
