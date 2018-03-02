@@ -56,11 +56,11 @@ def consecutive(_m,_n):
   divisions = 0
   t = min(_m,_n)
   while t > 0:
-    if _m % t == 0:
-      divisions += 1
+    divisions += 1 # this will count the division even if it fails the conditional
+    if _m % t == 0: 
+      divinsions += 1 # this will catch the cases where it fails or suceeds the second conditional
       if _n % t == 0:
-        divisions += 1
-        break;
+        return divisions # because we found the gcd
     t -= 1
   return divisions
 
