@@ -13,8 +13,7 @@ c++ ./task2/fibGenerator.cpp -o ./task2/fibGenerator.x -std=c++11
 
 echo "Building Task 3"
 chmod 700 ./task3/makeScatterPlot.py
+chmod 700 ./task3/sieveTime.py
 c++ ./task3/common.cpp -o ./task3/common.x -std=c++11
-c++ ./task3/sieveGen.cpp -o ./task3/sieveGen.x -std=c++11
-c++ ./task3/sieveTime.cpp -o ./task3/sieveTime.x -std=c++11
 
 echo "Done! :)"
