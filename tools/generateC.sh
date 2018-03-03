@@ -1,3 +1,6 @@
+# File name: consecutive.py
+# Authors: John Salman, Jack Newman
+
 # This program will generate numbers consecutively from 1 to n in file file.txt
 
 # Usage: bash generateC.sh <file.txt> <n>

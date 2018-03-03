@@ -1,3 +1,6 @@
+# File name: consecutive.py
+# Authors: John Salman, Jack Newman
+
 #This program will generate n random numbers between x and y in file file.txt
 # usage: bash generateR.sh <file.txt> <n> <x> <y>
 

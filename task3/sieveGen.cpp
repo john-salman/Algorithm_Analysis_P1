@@ -1,3 +1,6 @@
+// File name: consecutive.py
+// Authors: John Salman, Jack Newman
+
 #include <math.h> // sqrt                                                                                                                                                                     
 #include <iostream> // cout                                                                                                                                                                   
 #include <fstream> // file manipulation                                                                                                                                                       

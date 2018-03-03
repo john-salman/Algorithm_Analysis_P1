@@ -1,3 +1,6 @@
+# File name: euclid.py
+# Authors: John Salman, Jack Newman
+
 #!/usr/bin/python                                                                                                                                                         
 
 import sys

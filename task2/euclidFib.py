@@ -1,3 +1,6 @@
+# File name: euclidFib.py
+# Authors: John Salman, Jack Newman
+
 #!/usr/bin/python                                                                                                                                                         
 
 import sys

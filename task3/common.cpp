@@ -1,3 +1,6 @@
+// File name: common.py
+// Authors: John Salman, Jack Newman
+
 /*
 Usage: ./script.x <list file 1> <list file 2> <return file list OPTIONAL>
 

@@ -1,8 +1,6 @@
 // File name: fibGenerator.cpp
 // Authors: John Salman, Jack Newman
-// Description: This program will generate a fibonacci sequence of length n, and write that to a file.
-// To run: ./a.x n output_file  for any integer n. Output will be limited to a value of
-// long long[ (2^63) - 1 ]
+
 
 #include <iostream>
 #include <stdlib.h>

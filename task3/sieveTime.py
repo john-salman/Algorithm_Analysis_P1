@@ -1,3 +1,6 @@
+# File name: consecutive.py
+# Authors: John Salman, Jack Newman
+
 #!/usr/bin/python                                                                                                             \
                                                                                                                                
 from timeit import default_timer as timer
