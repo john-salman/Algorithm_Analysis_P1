@@ -19,11 +19,15 @@ def main():
     timesFinal.append(timesSum / 100.0)
     i += 1
 
+    l = 2
+    numbers = []
+    while (l <= n):
+      numbers.append(l)
+      l += 1
 
-  fib_numbers = numbers[2:]
-  plt.scatter(fib_numbers, timesFinal)
-  plt.xlabel("Fibonacci Numbers")
-  plt.ylabel("Number of modulo divisions")
+  plt.scatter(numbers, timesFinal)
+  plt.xlabel("N")
+  plt.ylabel("Time")
   plt.tight_layout()
   if(sys.argv[2] == "save"):
     imgname = os.path.splitext(sys.argv[1])[0] + ".png"
@@ -37,6 +41,8 @@ def sieve(_n):
   prime = []
   primeRem = []
   i = 2
+  prime.append(0)
+  prime.append(0)
   while (i <= _n):
     prime.append(int(i))
     i += 1
