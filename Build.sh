@@ -16,3 +16,5 @@ chmod 700 ./task3/makeScatterPlot.py
 c++ ./task3/common.cpp -o ./task3/common.x -std=c++11
 c++ ./task3/sieveGen.cpp -o ./task3/sieveGen.x -std=c++11
 c++ ./task3/sieveTime.cpp -o ./task3/sieveTime.x -std=c++11
+
+echo "Done! :)"
