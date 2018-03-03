@@ -1,5 +1,4 @@
-#!/usr/bin/python
- 
+#!/usr/bin/python                                                                                                                                                                             
 from timeit import default_timer as timer
 import sys
 import matplotlib.pyplot as plt
@@ -13,21 +12,18 @@ def main():
     numbers.append(int(line))
   file.close()
 
-  i = 2 # because we want an n >= 1 
+  i = 2 # because we want an n >= 1                                                                                                                                                           
   timesFinal = []
   while i < len(numbers):
-    m = numbers[i] # implementing it like this instead of F(k + 1), as its more readable 
+    m = numbers[i] # implementing it like this instead of F(k + 1), as its more readable                                                                                                      
     n = numbers[i - 1]
-    timesSum = 0 # to hold the number of divisions for each m, n pair
+    timesSum = 0 # to hold the number of divisions for each m, n pair                                                                                                                         
+    x = 0
     while x < 99:
       timesSum += euclid(m,n)
       x += 1
     timesFinal.append(timesSum / 100.0)
     i += 1
-  string_out = "Worst-case efficiency of Euclids Algortihm on a Fibonacci Seque\
-nce of length: " + repr(len(numbers)) + " is: " + repr(average)
-  print (string_out)
-
 
   fib_numbers = numbers[2:]
   plt.scatter(fib_numbers, timesFinal)
@@ -40,24 +36,23 @@ nce of length: " + repr(len(numbers)) + " is: " + repr(average)
   else:
     plt.show()
 
-# Input: integer _m, integer _n
-# Condition: _m >= _n  
+# Input: integer _m, integer _n                                                                                                                                                               
+# Condition: _m >= _n                                                                                                                                                                         
 def euclid(_m,_n):
   start = timer()
 
   m = _m
   n = _n
-
-  divisions = 0
-  # If the value of n, then we know that the current m 
-  # is the greatest common divider of both m & n                                                                                                            
+  # If the value of n, then we know that the current m                                                                                                                                        
+  # is the greatest common divider of both m & n                                                                                                                                              
   while n != 0 :
     r = m % n
     m = n
     n = r
 
   end = timer()
-  return end - start # return the current m  
-  
-  if __name__== "__main__":
+  return end - start # return the current m                                                                                                                                                   
+
+
+if __name__== "__main__":
       main()
