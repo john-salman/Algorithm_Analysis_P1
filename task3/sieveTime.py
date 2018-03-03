@@ -9,12 +9,15 @@ import math # sqrt()
 def main():
   n = int(sys.argv[1])
   timesFinal = []
-  for i in range(2, _n + 1):
+  i = 2
+  while (i <= n):
     x = 0
+    timesSum = 0
     while x < 99:
       timesSum += sieve(i)
       x += 1
     timesFinal.append(timesSum / 100.0)
+    i += 1
 
 
   fib_numbers = numbers[2:]
@@ -33,20 +36,28 @@ def sieve(_n):
   start = timer()
   prime = []
   primeRem = []
-  for i in range(2, _n):
-    prime[i] = i
-  m = sqrt(_n)
-  for p in range(2, m + 1):
+  i = 2
+  while (i <= _n):
+    prime.append(int(i))
+    i += 1
+
+  m = math.sqrt(_n)
+  p = 2
+  while (p <= int(m)):
     if (prime[p] != 0):
       j = p * p
       while j <= _n:
         prime[j] = 0
         j += p
+    p += 1
   j = 0
-  for p in range(2, _n + 1):
+
+  p = 2
+  while (p <= _n):
     if (prime[p] != 0):
-      primeRem[j] = prime[p]
+      primeRem.append(int(prime[p]))
       j += 1
+    p += 1
 
 
   end = timer()
