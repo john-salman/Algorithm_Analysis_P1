@@ -103,7 +103,7 @@ int main(int argc, char const *argv[]) {
 	std::list<int> commonNums = findCommonNums(list1_c, list2_c);
 
 	//Print the common numbers
-	// printList(commonNums);
+	printList(commonNums);
 
 	return 0;
 }

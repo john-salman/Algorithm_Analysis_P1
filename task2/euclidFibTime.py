@@ -28,7 +28,7 @@ def main():
   fib_numbers = numbers[2:]
   plt.scatter(fib_numbers, timesFinal)
   plt.xlabel("Fibonacci Numbers")
-  plt.ylabel("Number of modulo divisions")
+  plt.ylabel("Time")
   plt.tight_layout()
   if(sys.argv[2] == "save"):
     imgname = os.path.splitext(sys.argv[1])[0] + ".png"
